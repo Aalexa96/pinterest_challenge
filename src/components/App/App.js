@@ -1,7 +1,9 @@
 import logo from '../../logo.svg';
+import Card from '../Card/Card';
 import './App.css';
 
 function App() {
+  const foo = 'William';
   return (
     <div className="App">
       <header className="App-header">
@@ -9,13 +11,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Card/>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React {foo}
         </a>
       </header>
     </div>
