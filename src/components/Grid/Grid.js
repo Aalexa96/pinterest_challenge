@@ -5,58 +5,27 @@ function Grid(props) {
     const cats = props.cats;
     const noColumns = 6;
     const columnsArrays = [];
+    let itemsPerColumn = Math.floor(cats.length / noColumns);
 
     for (let i = 0; i < noColumns; i++) {
-        columnsArrays.push([]);
+        let newColumn = cats.splice(0, itemsPerColumn);
+        columnsArrays.push(newColumn);
     }
 
-    console.log(cats);
     console.log(columnsArrays);
 
     return (
         <div className="Grid_row">
-            <div className="Grid_column">
-                <Card cat={cats[0]} />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </div>
-            <div className="Grid_column">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </div>
-            <div className="Grid_column">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </div>
-            <div className="Grid_column">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </div>
-            <div className="Grid_column">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </div>
-            <div className="Grid_column">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </div>
+            {columnsArrays.map((column, index) => {
+                return (<div className="Grid_column" key={index}>
+
+                    {column.map(cat => {
+                        return (<Card cat={cat} key={cat.id} />);
+                    })}
+
+
+                </div>)
+            })}
         </div>
     );
 }

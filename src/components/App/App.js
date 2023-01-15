@@ -8,8 +8,8 @@ function App() {
   const [cats, setCats] = useState([]);
 
   useEffect(() => {
-    getRandomImages().then(cats => {
-      setCats(cats);
+    getRandomImages().then(catz => {
+      setCats(catz);
     });
   }, [])
 
