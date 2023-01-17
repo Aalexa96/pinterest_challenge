@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { MyContext } from "../../contexts/myContext";
 import Card from "../Card/Card";
 import './Grid.css';
 
@@ -12,10 +14,11 @@ function Grid(props) {
         columnsArrays.push(newColumn);
     }
 
-    console.log(columnsArrays);
+    const [contextState, setContextState] = useContext(MyContext);
 
     return (
         <div className="Grid_row">
+            <h1>{contextState}</h1>
             {columnsArrays.map((column, index) => {
                 return (<div className="Grid_column" key={index}>
 

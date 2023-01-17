@@ -5,14 +5,18 @@ import "./Card.css";
 function Card(props) {
     const cat = props.cat;
 
-    const valueFromContext = useContext(MyContext);
-    console.log('DIN CARD ', valueFromContext);
+    const [contextState, setContextState] = useContext(MyContext);
+
+
+    function clickOnTitle() {
+        setContextState('William doarme');
+    }
 
     return (
-    <div className="Card_container">
-        <img className="Card_img" src={cat?.url} alt="" />
-        <p className="Card_title">{cat?.id}</p>
-    </div>
+        <div className="Card_container">
+            <img className="Card_img" src={cat?.url} alt="" />
+            <p className="Card_title" onClick={clickOnTitle}>{cat?.id}</p>
+        </div>
     );
 }
 
