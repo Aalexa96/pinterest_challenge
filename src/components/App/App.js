@@ -19,7 +19,7 @@ function App() {
         <Search />
       </header>
       <main>
-        <Grid cats={cats} />
+        <Grid cats={cats} noColumns={6} />
       </main>
     </div>
   );

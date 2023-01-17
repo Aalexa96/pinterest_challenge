@@ -3,9 +3,9 @@ import './Grid.css';
 
 function Grid(props) {
     const cats = props.cats;
-    const noColumns = 6;
+    const noColumns = props.noColumns;
     const columnsArrays = [];
-    let itemsPerColumn = Math.floor(cats.length / noColumns);
+    const itemsPerColumn = Math.floor(cats.length / noColumns);
 
     for (let i = 0; i < noColumns; i++) {
         let newColumn = cats.splice(0, itemsPerColumn);

@@ -14,7 +14,7 @@ function getRandomImage() {
 function getRandomImages() {
     return fetcher({
         limit: 100,
-        breed_id: 'ragd'
+        _breed_id: 'ragd'
     });
 }
 
