@@ -1,10 +1,9 @@
-import { useState } from "react";
+
 import { MyContext } from "./myContext";
 
 function Providers(props) {
-    const [contextState, setContextState] = useState('William e turbat');
     return (
-    <MyContext.Provider value={[contextState, setContextState]}>
+    <MyContext.Provider value={''}>
         {props.children}
     </MyContext.Provider>
     );
