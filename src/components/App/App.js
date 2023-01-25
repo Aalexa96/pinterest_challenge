@@ -2,7 +2,7 @@ import Grid from '../Grid/Grid';
 import Search from '../Search/Search';
 import './App.css';
 import { useEffect } from 'react';
-import { getRandomImages } from '../../services/catsAPI';
+import { getCatsByBreed} from '../../services/catsAPI';
 import { useContext } from 'react';
 import { MyContext } from '../../contexts/myContext';
 
@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
 
-    getRandomImages().then(catz => {
+    getCatsByBreed('beng').then(catz => {
 
       dispatch({
         type:'SET_CATS', 

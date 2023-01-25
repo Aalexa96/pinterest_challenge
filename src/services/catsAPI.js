@@ -7,15 +7,21 @@ function fetcher(params = {}) {
         .catch(() => console.error('Request Failed'));
 }
 
-function getRandomImage() {
+function getCat() {
     return fetcher();
 }
 
-function getRandomImages() {
+function getAllCats() {
     return fetcher({
-        limit: 100,
-        _breed_id: 'ragd'
+        limit: 100
     });
 }
 
-export { getRandomImage, getRandomImages };
+function getCatsByBreed (breed) {
+    return fetcher ({
+        limit: 100,
+        breed_ids: breed
+    })
+}
+
+export { getCat, getAllCats, getCatsByBreed };
