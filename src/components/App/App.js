@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
 
-    getCatsByBreed('beng').then(catz => {
+    getCatsByBreed(state.searchBreedId).then(catz => {
 
       dispatch({
         type:'SET_CATS', 
@@ -20,7 +20,7 @@ function App() {
 
     });
 
-  }, [dispatch])
+  }, [dispatch, state.searchBreedId])
 
   return (
     <div className="App">

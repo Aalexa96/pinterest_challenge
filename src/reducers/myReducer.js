@@ -7,9 +7,10 @@ function myReducer(state, action) {
         }
     }
 
-    if (action.type === 'SEARCH_CATS') {
+    if (action.type === 'SET_SEARCH_BREED') {
         return {
-
+            ...state,
+            searchBreedId: action.searchBreedId
         }
     }
 
