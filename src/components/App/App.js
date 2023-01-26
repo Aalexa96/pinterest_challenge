@@ -6,6 +6,9 @@ import { getCatsByBreed } from '../../services/catsAPI';
 import { useContext } from 'react';
 import { MyContext } from '../../contexts/myContext';
 import Loader from '../Loader/Loader';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell, faCommentDots, faUser } from '@fortawesome/free-solid-svg-icons';
+import Logo from '../Logo/Logo';
 
 function App() {
   const [state, dispatch] = useContext(MyContext);
@@ -29,9 +32,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Logo/>
         <Search />
+        <FontAwesomeIcon icon={faBell} className='App-header-icon' />
+        <FontAwesomeIcon icon={faCommentDots} className='App-header-icon' />
+        <FontAwesomeIcon icon={faUser} className='App-header-icon' style={{marginRight: '24px'}}/>
       </header>
-      <main>
+      <main className="App-main">
         {!state.loading && <Grid cats={state?.cats} noColumns={6} />}
         {state.loading && <Loader />}
       </main>

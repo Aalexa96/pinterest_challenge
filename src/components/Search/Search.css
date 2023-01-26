@@ -1,6 +1,22 @@
-.Search_input {
-    border-radius: 100px;
-    background: #dadcde;
-    padding: 13px;
-    border: none;
+.select-search-container{
+    width: 100% !important;
+    flex: 1 1 auto !important;
+}
+.select-search-input {
+    background: rgb(216, 216, 216) !important;
+    border-radius: 30px !important;
+    width: 100% !important;
+    border: unset !important;
+    color: black !important;
+}
+.select-search-input:hover {
+    background: rgb(190, 189, 189) !important;
+}
+.select-search-option, .select-search-not-found {
+    background: rgb(255, 255, 255) !important;
+    color: black !important;
+}
+.select-search-select{
+    border: unset !important;
+    width: 1000px !important;
 }

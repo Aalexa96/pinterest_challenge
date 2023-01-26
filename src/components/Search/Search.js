@@ -29,9 +29,7 @@ function Search() {
     }
 
     return (
-        <div>
-            <SelectSearch options={breeds} onChange={onSelectChange} value={state.searchBreedId} name="language" placeholder="Choose your language" />
-        </div>
+        <SelectSearch options={breeds} onChange={onSelectChange} value={state.searchBreedId} placeholder="Choose your cat breed" search={true} />
     );
 }
 

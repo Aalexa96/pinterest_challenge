@@ -1,4 +1,26 @@
 .App-header {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
-    padding: 10px 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+}
+
+.App-header-icon {
+    font-size: 30px;
+    margin-left: 24px;
+    color: rgb(100, 98, 100);
+    cursor: pointer;
+}
+
+.App-header-icon:hover {
+    color: rgb(79, 78, 79);
+}
+
+.App-main{
+    margin-top: 80px;
 }
