@@ -6,7 +6,8 @@ import { MyContext } from "./myContext";
 function Providers(props) {
     const [state, dispatch] = useReducer (myReducer, {
         cats: [], 
-        searchBreedId: ''
+        searchBreedId: '',
+        loading: false
     });
 
     return (

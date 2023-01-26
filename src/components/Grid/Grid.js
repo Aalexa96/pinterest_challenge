@@ -6,14 +6,12 @@ function Grid(props) {
     const cats = props.cats;
     const noColumns = props.noColumns;
     const columnsArrays = [];
-    const itemsPerColumn = Math.floor(cats.length / noColumns);
+    const itemsPerColumn = cats.length > 6 ? Math.floor(cats.length / noColumns) : 1;
 
     for (let i = 0; i < noColumns; i++) {
         let newColumn = cats.splice(0, itemsPerColumn);
         columnsArrays.push(newColumn);
-    }
-
-    
+    }   
 
     return (
         <div className="Grid_row">
