@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { getCatsByBreed} from '../../services/catsAPI';
 import { useContext } from 'react';
 import { MyContext } from '../../contexts/myContext';
+import Loader from '../Loader/Loader';
 
 function App() {
   const [state, dispatch] = useContext(MyContext);
@@ -29,6 +30,7 @@ function App() {
       </header>
       <main>
         <Grid cats={state?.cats} noColumns={6} />
+        {/* <Loader/> */}
       </main>
     </div>
   );

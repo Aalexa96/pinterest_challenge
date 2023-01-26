@@ -8,9 +8,7 @@ function Card(props) {
 
     return (
         <div className="Card_container">
-            
             <img className="Card_img" src={cat?.url} alt="" />
-            <p className="Card_title" >{cat?.id}</p>
         </div>
     );
 }
