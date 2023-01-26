@@ -1,4 +1,4 @@
-import { faArrowUpFromBracket, faEllipsis, faHeart, faListDots } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpFromBracket, faEllipsis, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Card.css";
 
